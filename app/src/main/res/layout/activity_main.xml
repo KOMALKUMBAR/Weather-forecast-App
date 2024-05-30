@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ba"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor=" #FFFFFF"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="35dp"
+        android:layout_marginTop="25dp"
+        android:text="WEATHER FORECAST splash"/>
+
+
+    <ImageView
+        android:layout_width="251dp"
+        android:layout_height="258dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/white_cloud" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="102dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:text="Weather Matters, We've Got the Details"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
