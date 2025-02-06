@@ -1,4 +1,4 @@
-package com.android1.weatherappassement
+package com.android1.weatherappassement.DataClass
 
 data class JsonData(
     val base: String,

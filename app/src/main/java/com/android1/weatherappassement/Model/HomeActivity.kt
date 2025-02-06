@@ -1,9 +1,12 @@
-package com.android1.weatherappassement
+package com.android1.weatherappassement.Model
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.SearchView
+import androidx.appcompat.app.AppCompatActivity
+import com.android1.weatherappassement.ApiInterface.ApiInterface
+import com.android1.weatherappassement.DataClass.JsonData
+import com.android1.weatherappassement.R
 import com.android1.weatherappassement.databinding.ActivityMain2Binding
 import retrofit2.Call
 import retrofit2.Callback
@@ -15,7 +18,7 @@ import java.util.Date
 import java.util.Locale
 
 
-class MainActivity2 : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
  private val binding:ActivityMain2Binding by lazy {
      ActivityMain2Binding.inflate(layoutInflater)
  }
@@ -23,7 +26,7 @@ class MainActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         // setContentView(R.layout.activity_main2)
         //binding=ActivityMainBinding.inflate(layoutInflater)
-        //https://api.openweathermap.org/data/2.5/weather?q=pune&appid=f28aedb244f1cc1400ff29e92e68e53b
+            //https://api.openweathermap.org/data/2.5/weather?q=pune&appid=f28aedb244f1cc1400ff29e92e68e53b
         setContentView(binding.root)
         fecthWetherData("pune")
         SerchCity()
@@ -53,7 +56,7 @@ class MainActivity2 : AppCompatActivity() {
             .baseUrl("https://api.openweathermap.org/data/2.5/")
             .build()
             .create(ApiInterface::class.java)
-        val response = retrofit.getwetherData(cityName, "(appid)", "metric")
+        val response = retrofit.getwetherData(cityName, "f28aedb244f1cc1400ff29e92e68e53b", "metric")
         response.enqueue(object : Callback<JsonData> {
             override fun onResponse(call: Call<JsonData>, response: Response<JsonData>) {
                 Log.d("TAG", "onResponse: "+response.body())
